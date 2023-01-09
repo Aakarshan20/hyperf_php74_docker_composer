@@ -18,6 +18,10 @@ services:
     stdin_open: true
     tty: true
     restart: always
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - /home/docker/mysql:/var/lib/mysql
 
   nginx:
     image: nginx
